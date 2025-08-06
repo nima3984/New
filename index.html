@@ -1,79 +1,231 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>پرفیومچی | خانه</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پرفیومچی - فروشگاه لوکس عطر</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap");
+
     body {
       margin: 0;
-      font-family: sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      background-color: #000;
+      color: #f5f5f5;
     }
     header {
-      background-color: #004d40;
-      padding: 1rem;
+      background-color: #004d40; /* سبز کله‌غازی */
+      padding: 30px 20px;
       text-align: center;
+      color: #f5f5f5;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #1c1c1c;
     }
     nav a {
-      color: gold;
-      margin: 0 1rem;
+      color: #f5f5f5;
+      padding: 15px 20px;
+      display: block;
       text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #ffd700; /* طلایی */
+      color: #000;
     }
     section {
-      padding: 2rem;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .product {
-      border: 1px solid #333;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      background-color: #1a1a1a;
+    h2 {
+      color: #ffd700; /* طلایی */
+    }
+    .product-category {
+      background-color: #111;
+      margin: 20px 0;
+      padding: 15px;
+      border-left: 5px solid #004d40;
     }
     footer {
       background-color: #004d40;
-      padding: 1rem;
+      color: #f5f5f5;
       text-align: center;
-      color: #ccc;
+      padding: 20px;
+    }
+    .social {
+      margin-top: 10px;
+    }
+    .social a {
+      color: #ffd700;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .social a:hover {
+      color: #1de9b6; /* سبز روشن */
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      background-color: #222;
+      color: #f5f5f5;
+    }
+    .search-result {
+      margin-top: 15px;
+      background-color: #111;
+      padding: 10px;
+      display: none;
+    }
+    @media screen and (max-width: 600px) {
+      nav a {
+        padding: 10px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>پرفیومچی</h1>
-    <nav>
-      <a href="#home">خانه</a>
-      <a href="#products">محصولات</a>
-      <a href="#contact">تماس با ما</a>
-    </nav>
+    <p>به فروشگاه لوکس عطر خوش آمدید</p>
   </header>
 
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#products">محصولات</a>
+    <a href="#about">درباره ما</a>
+    <a href="#articles">مقالات</a>
+    <a href="#contact">تماس با ما</a>
+    <a href="#faq">سوالات متداول</a>
+    <a href="#rules">قوانین</a>
+    <a href="#search">جستجو</a>
+  </nav>
+
   <section id="home">
-    <h2>خوش آمدید به دنیای عطرهای خاص</h2>
-    <p>در پرفیومچی، بهترین عطرهای اورجینال را با قیمت مناسب ارائه می‌کنیم.</p>
+    <h2>خانه</h2>
+    <p>
+      در اینجا مجموعه‌ای از بهترین و لوکس‌ترین عطرها را برای شما گردآوری
+      کرده‌ایم. با ما همراه باشید.
+    </p>
   </section>
 
   <section id="products">
-    <h2>محصولات ویژه</h2>
-    <div class="product">
-      <h3>عطر شماره ۱</h3>
-      <p>رایحه‌ای گرم و ماندگار مناسب برای شب‌های خاص.</p>
-    </div>
-    <div class="product">
-      <h3>عطر شماره ۲</h3>
-      <p>ترکیبی از طراوت و انرژی برای روزهای کاری.</p>
-    </div>
+    <h2>محصولات</h2>
+    <div class="product-category">عطرهای مردانه</div>
+    <div class="product-category">عطرهای زنانه</div>
+    <div class="product-category">عطرهای مناسب فصل</div>
+    <div class="product-category">عطرهای مناسب استایل خاص</div>
+  </section>
+
+  <section id="about">
+    <h2>درباره ما</h2>
+    <p>
+      پرفیومچی، یکی از برندهای زیرمجموعه مجموعه بزرگ چی مارکت است.
+      ماموریت ما ارائه عطرها و ادکلن‌های با کیفیت و بسته‌بندی شیک است تا همه
+      بتوانند با قیمت مناسب به رایحه‌های اصیل و ماندگار دسترسی داشته باشند.
+      هدف ما این است که تجربه خرید عطر برای تمامی علاقه‌مندان، آسان،
+      لذت‌بخش و مقرون‌به‌صرفه باشد.
+    </p>
+    <p>
+      تمامی محصولات مجموعه چی مارکت شامل عطرها و ادکلن‌ها، دارای مجوز رسمی و
+      سیب سلامت هستند و مجموعه‌ای از ادکلن‌های اورجینال وارداتی را با
+      مجوزهای سازمان غذا و دارو عرضه می‌کنیم. کیفیت و اصالت محصولات برای ما
+      اولویت اصلی است تا بهترین تجربه را برای مشتریان خود رقم بزنیم.
+    </p>
+    <p>
+      مواد اولیه و اسانس‌هایی که در تولید عطرهای اختصاصی ما استفاده می‌شوند،
+      از مرغوب‌ترین برندهای فرانسوی و ایتالیایی تهیه شده‌اند تا رایحه‌هایی
+      خاص و ماندگار خلق کنیم.
+    </p>
+    <p>
+      با بیش از پنج سال تجربه در شناخت و ساخت عطرهای با کیفیت، ما مفتخریم که
+      محصولات خود را با بهترین کیفیت و دلگرم‌کننده‌ترین کوالیتی، همراه با قیمت
+      بسیار مناسب ارائه کنیم.
+    </p>
+    <p>
+      تمامی محصولات و تولیدات مجموعه چی مارکت دارای مجوزهای بسیار معتبر سلامت
+      هستند و تضمین‌کننده کیفیت بالای هر محصول می‌باشند.
+    </p>
+  </section>
+
+  <section id="articles">
+    <h2>مقالات</h2>
+    <p>
+      در این بخش می‌توانید مقالات مرتبط با رایحه‌شناسی، معرفی برندهای عطر،
+      روش انتخاب عطر مناسب و بسیاری مطالب مفید دیگر را مطالعه کنید.
+    </p>
   </section>
 
   <section id="contact">
     <h2>تماس با ما</h2>
-    <p>ایمیل: info@perfumechii.ir</p>
-    <p>اینستاگرام: @perfumechii</p>
+    <p>برای ارتباط با ما می‌توانید از طریق واتساپ یا اینستاگرام اقدام کنید:</p>
+    <div class="social">
+      <a href="https://wa.me/your-number" target="_blank"
+        ><i class="fab fa-whatsapp"></i> واتساپ</a
+      >
+      |
+      <a href="https://instagram.com/yourpage" target="_blank"
+        ><i class="fab fa-instagram"></i> اینستاگرام</a
+      >
+    </div>
+    <p><i class="fa fa-envelope"></i> ایمیل: info@perfume.org</p>
+  </section>
+
+  <section id="faq">
+    <h2>سوالات متداول</h2>
+    <p><strong>آیا عطرها اورجینال هستند؟</strong> بله، تمامی عطرها با ضمانت اصالت ارائه می‌شوند.</p>
+    <p><strong>مدت زمان ارسال چقدر است؟</strong> بین ۲۴ تا ۷۲ ساعت کاری.</p>
+    <p><strong>آیا امکان بازگشت کالا وجود دارد؟</strong> در صورت باز نشدن پلمپ ظرف ۳ روز کاری.</p>
+  </section>
+
+  <section id="rules">
+    <h2>قوانین و مقررات</h2>
+    <p><strong>شرایط خرید:</strong> ثبت سفارش به معنی پذیرش قوانین سایت است.</p>
+    <p><strong>بازگشت کالا:</strong> فقط در صورت سالم بودن بسته‌بندی و در زمان تعیین شده.</p>
+    <p><strong>حفظ حریم خصوصی:</strong> اطلاعات شما کاملاً محرمانه است و به هیچ عنوان منتشر نخواهد شد.</p>
+  </section>
+
+  <section id="search">
+    <h2>جستجو</h2>
+    <p>برای یافتن سریع محصولات یا مقالات، جستجو کنید:</p>
+    <input
+      type="text"
+      placeholder="جستجوی محصول یا مقاله..."
+      oninput="showResult()"
+      aria-label="جستجوی محصول یا مقاله"
+    />
+    <div class="search-result" id="result">نتیجه‌ای یافت نشد.</div>
   </section>
 
   <footer>
-    © تمامی حقوق برای پرفیومچی محفوظ است - 2025
+    <p>تمامی حقوق این وب‌سایت محفوظ است © پرفیومچی 2025</p>
+    <p><i class="fa fa-credit-card"></i> درگاه پرداخت: به‌زودی فعال خواهد شد</p>
   </footer>
+
+  <script>
+    function showResult() {
+      const result = document.getElementById("result");
+      const input = event.target.value.trim();
+      if (input.length > 0) {
+        result.style.display = "block";
+        result.textContent = نتایج جستجو برای «${input}» یافت نشد.; // فعلاً نمونه ساده
+      } else {
+        result.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
